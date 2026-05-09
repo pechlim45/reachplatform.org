@@ -1,0 +1,568 @@
+<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REACH Platform</title>
+
+<style>
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#0f172a;
+}
+
+.logo span{
+color:#2563eb;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#2563eb;
+}
+
+/* BUTTONS */
+
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-right:10px;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#2563eb;
+color:white;
+}
+
+.btn-primary:hover{
+background:#1d4ed8;
+}
+
+.btn-outline{
+border:2px solid #2563eb;
+color:#2563eb;
+background:none;
+}
+
+.btn-outline:hover{
+background:#2563eb;
+color:white;
+}
+
+/* HERO SECTION */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:100px 8%;
+background:#eff6ff;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:55px;
+margin-bottom:20px;
+color:#0f172a;
+}
+
+.hero-text span{
+color:#2563eb;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:30px;
+max-width:600px;
+}
+
+.hero-image{
+flex:1;
+min-width:300px;
+text-align:center;
+}
+
+.hero-image img{
+width:90%;
+border-radius:20px;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 8%;
+background:white;
+text-align:center;
+}
+
+.about h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+font-size:18px;
+}
+
+/* IMPACT */
+
+.impact{
+padding:80px 8%;
+background:#f1f5f9;
+}
+
+.impact h2{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.impact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.impact-box{
+background:white;
+padding:40px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.impact-box h3{
+font-size:40px;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+/* FOUNDER */
+
+.founder{
+padding:100px 8%;
+display:flex;
+align-items:center;
+gap:50px;
+background:white;
+flex-wrap:wrap;
+}
+
+.founder-image{
+flex:1;
+min-width:300px;
+}
+
+.founder-image img{
+width:100%;
+border-radius:20px;
+}
+
+.founder-content{
+flex:1;
+min-width:300px;
+}
+
+.founder-content h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.founder-content p{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.badges{
+margin-bottom:25px;
+}
+
+.badge{
+display:inline-block;
+background:#eff6ff;
+color:#2563eb;
+padding:10px 18px;
+margin:5px;
+border-radius:30px;
+font-size:14px;
+font-weight:bold;
+}
+
+/* PROGRAMS */
+
+.programs{
+padding:80px 8%;
+background:#f8fafc;
+}
+
+.programs h2{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.program-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.program-card{
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.program-card h3{
+margin-bottom:15px;
+color:#2563eb;
+}
+
+/* CALL TO ACTION */
+
+.cta{
+padding:100px 8%;
+text-align:center;
+background:#2563eb;
+color:white;
+}
+
+.cta h2{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px 8%;
+}
+
+footer p{
+margin:10px 0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.founder{
+flex-direction:column;
+}
+
+header{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+REACH<span>.</span>
+</div>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Programs</a></li>
+<li><a href="#">Impact</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+Empowering Refugees Through 
+<span>Digital Skills</span> 
+and Innovation
+</h1>
+
+<p>
+REACH is a refugee-led platform creating opportunities for displaced youth and women through digital education, entrepreneurship, and employment pathways.
+</p>
+
+<a href="#" class="btn btn-primary">Join REACH</a>
+
+<a href="#" class="btn btn-outline">Learn More</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="REACH">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>About REACH</h2>
+
+<p>
+REACH (Refugees Employment Accelerator and Career Hub) is a refugee-led social enterprise dedicated to empowering marginalized youth and women through digital skills training, entrepreneurship support, innovation, and career opportunities.
+</p>
+
+</section>
+
+<!-- IMPACT -->
+
+<section class="impact">
+
+<h2>Our Impact</h2>
+
+<div class="impact-grid">
+
+<div class="impact-box">
+<h3>500+</h3>
+<p>Youth Trained</p>
+</div>
+
+<div class="impact-box">
+<h3>120+</h3>
+<p>Women Empowered</p>
+</div>
+
+<div class="impact-box">
+<h3>50+</h3>
+<p>Jobs Created</p>
+</div>
+
+<div class="impact-box">
+<h3>15+</h3>
+<p>Partners & Supporters</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOUNDER -->
+
+<section class="founder">
+
+<div class="founder-image">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Founder">
+
+</div>
+
+<div class="founder-content">
+
+<h2>Meet Our Founder</h2>
+
+<p>
+Pech Lim Gatluak is a refugee youth leader, social entrepreneur, and digital inclusion advocate committed to transforming refugee communities through innovation, leadership, and opportunity creation.
+</p>
+
+<p>
+As the Founder of REACH, he works to empower displaced youth and women through education, entrepreneurship, and digital transformation.
+</p>
+
+<div class="badges">
+
+<span class="badge">YALI Alumni</span>
+
+<span class="badge">Mastercard Foundation Scholar</span>
+
+<span class="badge">Social Entrepreneur</span>
+
+<span class="badge">Refugee Youth Leader</span>
+
+</div>
+
+<a href="#" class="btn btn-primary">
+Read Full Story
+</a>
+
+</div>
+
+</section>
+
+<!-- PROGRAMS -->
+
+<section class="programs">
+
+<h2>Our Programs</h2>
+
+<div class="program-grid">
+
+<div class="program-card">
+
+<h3>Digital Skills Training</h3>
+
+<p>
+Providing practical training in graphic design, web development, AI tools, and digital literacy.
+</p>
+
+</div>
+
+<div class="program-card">
+
+<h3>Entrepreneurship Support</h3>
+
+<p>
+Supporting refugee entrepreneurs through mentorship, business incubation, and startup guidance.
+</p>
+
+</div>
+
+<div class="program-card">
+
+<h3>Career Opportunities</h3>
+
+<p>
+Connecting refugee youth to remote jobs, internships, and employment pathways.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Be Part of the Change</h2>
+
+<p>
+Support refugee innovation and help create sustainable opportunities for displaced communities across Africa.
+</p>
+
+<a href="#" class="btn btn-outline" style="background:white;color:#2563eb;">
+Partner With Us
+</a>
+
+<a href="#" class="btn btn-primary" style="background:#0f172a;">
+Donate Today
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>REACH Platform</h2>
+
+<p>
+Refugees Employment Accelerator and Career Hub
+</p>
+
+<p>
+Email: info@reachplatform.org
+</p>
+
+<p>
+Phone: +256 XXX XXX XXX
+</p>
+
+<p>
+© 2026 REACH Platform. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
